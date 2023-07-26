@@ -1,0 +1,4 @@
+E:\project\ChalDal.web\eCom_client\obj\Debug\eCom_client.esproj.SuggestedBindingRedirects.cache
+E:\project\ChalDal.web\eCom_client\obj\Debug\eCom_client.esproj.CoreCompileInputs.cache
+E:\project\ChalDal.client\eCom_client\obj\Debug\eCom_client.esproj.SuggestedBindingRedirects.cache
+E:\project\ChalDal.client\eCom_client\obj\Debug\eCom_client.esproj.CoreCompileInputs.cache
