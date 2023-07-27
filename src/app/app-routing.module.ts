@@ -6,6 +6,7 @@ import { DashBoardComponent } from './components/admin/dash-board/dash-board.com
 import { UserComponent } from './components/user/user.component';
 import { ProductListComponent } from './components/admin/product/product-list/product-list.component';
 import { HomeComponent } from './components/user/home/home.component';
+import { AddProductComponent } from './components/admin/product/add-product/add-product.component';
 
  
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashBoardComponent },
       { path: 'stock', component: StockListComponent },  
       { path: 'product', component: ProductListComponent},  
+      { path: 'add-product', component: AddProductComponent},
       // Add more admin routes as needed
     ],
   },
