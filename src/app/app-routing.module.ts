@@ -4,7 +4,7 @@ import { StockListComponent } from './components/admin/stock-list/stock-list.com
 import { AdminComponent } from './components/admin/admin.component';
 import { DashBoardComponent } from './components/admin/dash-board/dash-board.component';
 import { UserComponent } from './components/user/user.component';
-import { ProductListComponent } from './components/admin/product-list/product-list.component';
+import { ProductListComponent } from './components/admin/product/product-list/product-list.component';
 import { HomeComponent } from './components/user/home/home.component';
 
  
