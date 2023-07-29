@@ -1,14 +1,14 @@
-export interface Product {
-  id: number;
-  name: string;
-  price: number;
-  vat: number;
+import { StockModel } from "./stock.model";
+
+export interface ProductModel {
+  productId: number;
+  name: string; 
+  brand: string;
   description: string;
-  category: string; // e.g., Fruits, Vegetables, Dairy, Meat, etc.
-  imageUrl: string; // URL to the product image
-  quantity: number; // Available quantity in stock
-  expirationDate: Date; // Expiration date of the product
-  lastUpdated: Date;
-  updatedBy: string;
-  createdBy: string;
+  isDiscounted: boolean;
+  category: any;
+  stocks: StockModel;
+  imageUrl: string; // URL to the product image 
+  createdBy: string; 
+  createdDate: Date;
 }

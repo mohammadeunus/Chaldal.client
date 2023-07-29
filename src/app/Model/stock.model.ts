@@ -1,6 +1,6 @@
-export interface Stock {
+export interface StockModel {
     id: number;
-    productName: string;
+    name: string;
     quantity: number;
     costPrice: number;
     sellingPrice: number;
