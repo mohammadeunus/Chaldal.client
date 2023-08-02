@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StockListComponent } from './components/admin/stock-list/stock-list.component';
 import { AdminComponent } from './components/admin/admin.component';
-import { DashBoardComponent } from './components/admin/dash-board/dash-board.component';
-import { UserComponent } from './components/user/user.component';
+import { DashBoardComponent } from './components/admin/dash-board/dash-board.component'; 
+import { UserComponent } from './components/customer/user.component';
 import { ProductListComponent } from './components/admin/product/product-list/product-list.component';
-import { HomeComponent } from './components/user/home/home.component';
+import { HomeComponent } from './components/customer/home/home.component'; 
 import { AddProductComponent } from './components/admin/product/add-product/add-product.component';
 
  

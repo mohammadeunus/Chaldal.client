@@ -1,0 +1,21 @@
+<br />
+<p>Suggested Products</p>
+<p-carousel
+  [value]="groupedProducts"
+  [numVisible]="1"
+  [numScroll]="1"
+  [circular]="true"
+>
+  <ng-template let-productGroup pTemplate="item">
+    <div class="product-group">
+      <div *ngFor="let product of productGroup" class="product-card">
+        <img [src]="product.imageUrl" alt="Product" />
+        <div class="product-details">
+          <p class="title">{{ product.title }}</p>
+          <p class="subtitle">{{ product.subtitle }}</p>
+          <p class="price">{{ product.price }}</p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
