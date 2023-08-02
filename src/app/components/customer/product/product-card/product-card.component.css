@@ -17,32 +17,13 @@
 
 img {
     cursor: pointer;
-    transition: transform 100ms ease-in;
+    transition: transform 200ms ease-in-out;
 }
 
 img:hover {
     transform: scale(1.1);
 }
 
-.grid-view .description,
-.grid-view .title {
-    height: 50px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+ 
 
-.list-view .title {
-    height: 50px;
-    overflow: hidden;
-}
-.list-view .description {
-    height: 75px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.cart-item-view .title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-} 
+ 

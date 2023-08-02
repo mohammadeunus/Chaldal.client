@@ -19,6 +19,9 @@ import { NgChartsModule } from 'ng2-charts';
 import { SideNavComponent } from './components/customer/side-nav/side-nav.component';
 import { AddProductComponent } from './components/admin/product/add-product/add-product.component';
 import { ProductCardComponent } from './components/customer/product/product-card/product-card.component';
+import { SuggestedProductsComponent } from './components/customer/product/suggested-products/suggested-products.component';
+import { AdvertisementComponent } from './components/shared/advertisement/advertisement.component';
+import { AllProductsComponent } from './components/customer/product/all-products/all-products.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { ProductCardComponent } from './components/customer/product/product-card
     ProductListComponent,
     SideNavComponent,
     AddProductComponent,
-    ProductCardComponent,  
+    ProductCardComponent,
+    SuggestedProductsComponent,
+    AdvertisementComponent,
+    AllProductsComponent,  
   ],
   imports: [
     BrowserModule,
