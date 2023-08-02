@@ -1,0 +1,16 @@
+/* styles.css */
+
+.banner {
+  
+  max-width: 50%;
+    display: flex; /* Display the images in a row (horizontal layout) */ 
+  }
+  
+  .banner img {
+    max-width: 100%; /* Ensure the images don't exceed their original width */
+    height: auto; /* Preserve the aspect ratio of the images */
+    margin-right: 10px; /* Add some spacing between the images (adjust as needed) */
+  }
+  
+  /* Additional styles if needed */
+  
