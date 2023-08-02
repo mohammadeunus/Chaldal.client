@@ -3,12 +3,16 @@
     width: 10rem;
     display: block;
     overflow: hidden;
-    height: 80%;
     border-radius: 1rem;
     transition: transform 200ms ease-in-out;
+    /* Remove the fixed height and set a minimum height */
+    min-height: 180px;
 }
-.btn{
+
+.btn {
     font-size: 10px;
+    /* Add some padding to the button to make it more visible */
+    padding: 5px 10px;
 }
 
 .card:hover { 
@@ -23,7 +27,3 @@ img {
 img:hover {
     transform: scale(1.1);
 }
-
- 
-
- 
