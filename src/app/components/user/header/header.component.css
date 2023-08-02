@@ -1,0 +1,27 @@
+/* styles.css */
+
+.container-fluid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+  
+  .logo-container-fluid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center; /* Vertically center the elements within .logo-container-fluid */
+  }
+  
+  .logo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center; /* Vertically center the elements within .logo-container */
+  }
+  
+  /* Add some padding to create a gap between the logo and the "Trending" link */
+  .logo,
+  .logo-text {
+    padding-right: 10px; /* Adjust the value as needed to create the desired gap */
+  }
+  
+  /* Additional styles if needed */
+  

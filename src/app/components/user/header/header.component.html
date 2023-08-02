@@ -1,54 +1,48 @@
 <header class="py-3 mb-3 border-bottom">
-  <div
-    class="container-fluid d-grid gap-3 align-items-center"
-    style="grid-template-columns: 1fr 2fr"
-  >
+  <div class="container-fluid d-grid gap-3 align-items-center">
     <!-- Collapsible List -->
-    <nav class="navbar navbar-expand-lg">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="logo" href="user">
-            <img
-              src="assets/logo.png"
-              alt="Logo"
-              width="155"
-              height="auto"
-              class="logo-img"
-            />
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Categories
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li>
-              <a class="dropdown-item" routerLink="/user/fruits">Fruits</a>
-            </li>
-            <li>
-              <a class="dropdown-item" routerLink="/user/vegetables"
-                >vegetables</a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" routerLink="/user/home-kitchen"
-                >Home & Kitchen</a
-              >
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Popular</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="logo-container d-flex me-auto">
+      <div class="logo">
+        <a href="user">
+          <img
+            src="assets/logo.png"
+            alt="Logo"
+            width="155"
+            height="auto"
+            class="logo-img"
+          />
+        </a>
+      </div>
+      <div class="logo-text">
+        <a class="nav-link" routerLink="/user/fruits"> Trending </a>
+      </div>
+
+      <div class="flex-shrink-0 dropdown">
+        <a
+          href="#"
+          class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Categories
+        </a>
+        <ul class="dropdown-menu text-small shadow">
+          <li>
+            <a class="dropdown-item" routerLink="/user/fruits">Fruits</a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/user/vegetables"
+              >vegetables</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/user/home-kitchen"
+              >Home & Kitchen</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!-- Search and User Profile -->
     <div class="d-flex align-items-center">
