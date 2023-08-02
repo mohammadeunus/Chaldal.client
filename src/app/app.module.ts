@@ -11,8 +11,7 @@ import { SideNavBarComponent } from './components/admin/side-nav-bar/side-nav-ba
 import { AdminComponent } from './components/admin/admin.component';
 import { UserComponent } from './components/customer/user.component';
 import { DashBoardComponent } from './components/admin/dash-board/dash-board.component';
-import { AdminHeaderComponent } from './components/admin/admin-header/admin-header.component';
-import { HomeComponent } from './components/customer/home/home.component';
+import { AdminHeaderComponent } from './components/admin/admin-header/admin-header.component'; 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductListComponent } from './components/admin/product/product-list/product-list.component';
 import { NgChartsModule } from 'ng2-charts';
@@ -22,6 +21,8 @@ import { ProductCardComponent } from './components/customer/product/product-card
 import { SuggestedProductsComponent } from './components/customer/product/suggested-products/suggested-products.component';
 import { AdvertisementComponent } from './components/shared/advertisement/advertisement.component';
 import { AllProductsComponent } from './components/customer/product/all-products/all-products.component';
+import { CarouselModule } from 'primeng/carousel';
+import { HomeComponent } from './components/customer/home/home.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { AllProductsComponent } from './components/customer/product/all-products
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
-    NgChartsModule
+    NgChartsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
