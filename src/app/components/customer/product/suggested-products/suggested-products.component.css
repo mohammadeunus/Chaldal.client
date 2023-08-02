@@ -1,18 +1,30 @@
-.suggested{ 
-    display: flex; /* Display the images in a row (horizontal layout) */ 
-}
-.card-title {
-    color: #db0075;
-}
-.card-text {
-    color: #17E6E6;
-}
-.list-inline-item {
-    color: #ffd700
-}
-.price {
-    color: #9B1B30;
-}
-.btn-pink {
-    background-color: #fcb2b2 !important;
-}
+.product-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .product-card {
+    width: calc(33.33% - 10px); /* 3 cards in one row */
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .product-card img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.1);
+  }
+  
+  .product-details {
+    text-align: center;
+  }
+  
