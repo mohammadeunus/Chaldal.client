@@ -8,9 +8,9 @@ import { TopProductService } from 'src/app/Services/topProduct/top-product.servi
   styleUrls: ['./dash-board.component.css']
 })
 export class DashBoardComponent implements OnInit {
-  topProducts: topProductModel[] = [];
-  barChartData: any[] = [];  
-  barChartLabels: string[] = [];
+  topProducts!: topProductModel[];
+  barChartData!: any[];  
+  barChartLabels!: string[];
   barChartOptions: any = {
     responsive: true,
     scales: {

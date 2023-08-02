@@ -14,9 +14,11 @@ import { DashBoardComponent } from './components/admin/dash-board/dash-board.com
 import { AdminHeaderComponent } from './components/admin/admin-header/admin-header.component';
 import { HomeComponent } from './components/user/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ProductListComponent } from './components/admin/product-list/product-list.component';
+import { ProductListComponent } from './components/admin/product/product-list/product-list.component';
 import { NgChartsModule } from 'ng2-charts';
 import { SideNavComponent } from './components/user/side-nav/side-nav.component';
+import { AddProductComponent } from './components/admin/product/add-product/add-product.component';
+import { ProductCardComponent } from './components/user/product/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { SideNavComponent } from './components/user/side-nav/side-nav.component'
     AdminHeaderComponent,
     HomeComponent,
     ProductListComponent,
-    SideNavComponent,  
+    SideNavComponent,
+    AddProductComponent,
+    ProductCardComponent,  
   ],
   imports: [
     BrowserModule,

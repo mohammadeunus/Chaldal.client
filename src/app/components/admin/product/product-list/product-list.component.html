@@ -8,17 +8,25 @@
           <tr>
             <th scope="col">Id</th>
             <th scope="col">Product Name</th>
-            <th scope="col">Last Updated</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Description</th>
+            <th scope="col">IsDiscounted</th>
+            <th scope="col">Category</th>
+            <th scope="col">Price</th>
+            <th scope="col">Created Date</th>
             <th scope="col">Updated By</th>
-            <th scope="col">Created By</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let eachProduct of products">
-            <td>{{ eachProduct.id }}</td>
+            <td>{{ eachProduct.productId }}</td>
             <td>{{ eachProduct.name }}</td>
-            <td>{{ eachProduct.lastUpdated }}</td>
-            <td>{{ eachProduct.updatedBy }}</td>
+            <td>{{ eachProduct.brand }}</td>
+            <td>{{ eachProduct.description }}</td>
+            <td>{{ eachProduct.isDiscounted }}</td>
+            <td>{{ eachProduct.categoryName }}</td>
+            <td>{{ eachProduct.sellingPrice }}</td>
+            <td>{{ eachProduct.createdDate }}</td>
             <td>{{ eachProduct.createdBy }}</td>
           </tr>
         </tbody>
