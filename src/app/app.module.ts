@@ -18,6 +18,7 @@ import { ProductListComponent } from './components/admin/product/product-list/pr
 import { NgChartsModule } from 'ng2-charts';
 import { SideNavComponent } from './components/user/side-nav/side-nav.component';
 import { AddProductComponent } from './components/admin/product/add-product/add-product.component';
+import { ProductCardComponent } from './components/user/product/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AddProductComponent } from './components/admin/product/add-product/add-
     HomeComponent,
     ProductListComponent,
     SideNavComponent,
-    AddProductComponent,  
+    AddProductComponent,
+    ProductCardComponent,  
   ],
   imports: [
     BrowserModule,
