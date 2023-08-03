@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
-import { CustomerProductModel } from 'src/app/Model/customer-product.model';
+import { HttpClient } from '@angular/common/http';
+import { Component, Input, OnInit } from '@angular/core';
+import {
+  CustomerProductModel,
+  CustomerProductResponseModel,
+} from 'src/app/Model/customer-product.model';
+import { ProductService } from 'src/app/Services/product/product.service';
 
 @Component({
   selector: 'app-all-products',
   templateUrl: './all-products.component.html',
   styleUrls: ['./all-products.component.css'],
 })
-export class AllProductsComponent {
+export class AllProductsComponent implements OnInit {
+  inputPageNumber: number = 1;
+  slicedPproducts: any[];
+  products2!: CustomerProductModel[];
+
+  constructor(private productService: ProductService) {
+    this.slicedPproducts = this.products.slice(0, 20);
+  }
+
+  //manual entry of data
   private products: CustomerProductModel[] = [
     {
       imageUrl: 'assets/products/aarong-dairy-sour-curd-500-gm.jpg',
@@ -82,9 +96,27 @@ export class AllProductsComponent {
     },
     // Add more products as needed
   ];
-  slicedPproducts: any[];
+  customerProductResponse: CustomerProductResponseModel = {
+    totalRecords: 40,
+    customerProductList: this.products,
+    Succeeded: true,
+  };
 
-  constructor() {
-    this.slicedPproducts = this.products.slice(0, 20);
+  ngOnInit(): void {
+    this.loadData();
+  }
+
+  loadData() {
+    this.productService.GetProductsByPage(this.inputPageNumber).subscribe({
+      next: (data) => {
+        this.products2 = data;
+        console.log(data);
+      },
+      error: (err: any) => console.log(err),
+    });
+  }
+
+  onPageNumberChanges(event: any) {
+    this.inputPageNumber = event;
   }
 }

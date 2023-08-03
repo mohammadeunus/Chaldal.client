@@ -7,5 +7,7 @@
   </div>
 </div>
 <br />
-
-<app-page-navigation></app-page-navigation>
+<app-page-navigation
+  (handleUserClick)="onPageNumberChanges($event)"
+  [totalRecords]="customerProductResponse.totalRecords"
+></app-page-navigation>

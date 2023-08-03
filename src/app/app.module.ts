@@ -11,10 +11,10 @@ import { SideNavBarComponent } from './components/admin/side-nav-bar/side-nav-ba
 import { AdminComponent } from './components/admin/admin.component';
 import { UserComponent } from './components/customer/user.component';
 import { DashBoardComponent } from './components/admin/dash-board/dash-board.component';
-import { AdminHeaderComponent } from './components/admin/admin-header/admin-header.component'; 
+import { AdminHeaderComponent } from './components/admin/admin-header/admin-header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ProductListComponent } from './components/admin/product/product-list/product-list.component'; 
-import { NgChartsModule } from 'ng2-charts'; 
+import { ProductListComponent } from './components/admin/product/product-list/product-list.component';
+import { NgChartsModule } from 'ng2-charts';
 import { SideNavComponent } from './components/customer/side-nav/side-nav.component';
 import { AddProductComponent } from './components/admin/product/add-product/add-product.component';
 import { ProductCardComponent } from './components/customer/product/product-card/product-card.component';
@@ -24,7 +24,8 @@ import { AllProductsComponent } from './components/customer/product/all-products
 import { CarouselModule } from 'primeng/carousel';
 import { HomeComponent } from './components/customer/home/home.component';
 import { PageNavigationComponent } from './components/shared/page-navigation/page-navigation.component';
- 
+import { PaginatorModule } from 'primeng/paginator';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,13 +40,13 @@ import { PageNavigationComponent } from './components/shared/page-navigation/pag
     AdminHeaderComponent,
     HomeComponent,
     ProductListComponent,
-    SideNavComponent, 
+    SideNavComponent,
     AddProductComponent,
     ProductCardComponent,
     SuggestedProductsComponent,
     AdvertisementComponent,
     AllProductsComponent,
-    PageNavigationComponent,  
+    PageNavigationComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,9 +54,10 @@ import { PageNavigationComponent } from './components/shared/page-navigation/pag
     HttpClientModule,
     NgbModule,
     NgChartsModule,
-    CarouselModule
+    CarouselModule,
+    PaginatorModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
