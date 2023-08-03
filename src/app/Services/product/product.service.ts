@@ -31,7 +31,8 @@ export class ProductService {
   }
   GetProductsByPage(pageNumber: number): Observable<CustomerProductModel[]> {
     return this.http.get<CustomerProductModel[]>(
-      this.baseApiUrl + `api/product/GetProductsByPage/pageNumber=${pageNumber}`
+      this.baseApiUrl +
+        `api/CustomerProduct/GetProducts?pageNumber=${pageNumber}`
     );
   }
 }
