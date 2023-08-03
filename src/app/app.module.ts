@@ -23,6 +23,7 @@ import { AdvertisementComponent } from './components/shared/advertisement/advert
 import { AllProductsComponent } from './components/customer/product/all-products/all-products.component';
 import { CarouselModule } from 'primeng/carousel';
 import { HomeComponent } from './components/customer/home/home.component';
+import { PageNavigationComponent } from './components/shared/page-navigation/page-navigation.component';
  
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { HomeComponent } from './components/customer/home/home.component';
     ProductCardComponent,
     SuggestedProductsComponent,
     AdvertisementComponent,
-    AllProductsComponent,  
+    AllProductsComponent,
+    PageNavigationComponent,  
   ],
   imports: [
     BrowserModule,
