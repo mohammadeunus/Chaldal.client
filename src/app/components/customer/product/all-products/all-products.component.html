@@ -1,15 +1,7 @@
 <br />
 <p>All Products</p>
-<div class="product-grid">
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
+<div class="product-grid" *ngFor="let eachCard of slicedPproducts">
+  <app-product-card [product]="eachCard"></app-product-card>
   <!-- Add more app-product-card components here -->
 </div>
 <br />
