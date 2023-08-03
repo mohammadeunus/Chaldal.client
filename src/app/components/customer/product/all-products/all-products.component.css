@@ -1,25 +1,22 @@
 .product-grid {
   display: flex;
   flex-wrap: wrap;
-  
   justify-content: space-between;
-  gap: 10px;
-}
-
+} 
 /* For larger screens, each card will occupy 10% of the container width minus the gap */
 app-product-card {  
   flex: 0 1 calc(10% - 20px);
+  margin-bottom: 20px; /* Add some bottom margin to create gaps between rows */
 }
 
 /* For medium screens, each card will occupy 10% of the container width minus the gap */
 @media (max-width: 768px) {
   app-product-card {
-     
     flex: 0 1 calc(10% - 20px);
   }
 }
 
-/* For smaller screens, each card will occupy 100% of the container width minus the gap */
+/* For smaller screens, each card will occupy 33.33% of the container width minus the gap */
 @media (max-width: 576px) {
   app-product-card { 
     flex: 0 1 calc(33.33% - 10px);
