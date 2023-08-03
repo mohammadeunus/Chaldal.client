@@ -9,36 +9,36 @@ import { CustomerProductModel } from 'src/app/Model/customer-product.model';
 export class AllProductsComponent {
   products: CustomerProductModel[] = [
     {
-      imageUrl: 'assets/products/aci-pure-salt-1-kg.jpg',
+      imageUrl: 'assets/products/aarong-dairy-sour-curd-500-gm.jpg',
       name: 'Aci Pure Salt 1 kg',
       weight: '1 kg',
       sellingPrice: 100,
     },
     {
-      imageUrl: 'assets/products/roshun-garlic-imported-25-gm-500-gm.jpg',
+      imageUrl: 'assets/products/badhakopi-cabbage-1-pcs.jpg',
       name: 'Beauty Makeup',
       weight: '500 gm',
       sellingPrice: 150,
     },{
-      imageUrl: 'assets/products/lizol-floor-cleaner-floral-disinfectant-surface-1-ltr.jpg',
+      imageUrl: 'assets/products/chaldal-premium-beef-bone-in-50-gm-1-kg.jpg',
       name: 'Aci Pure Salt 1 kg',
       weight: '1 kg',
       sellingPrice: 100,
     },
     {
-      imageUrl: 'assets/products/rupchanda-fortified-soyabean-oil-5-ltr.jpg',
+      imageUrl: 'assets/products/chicken-eggs-layer-12-pcs.jpg',
       name: 'Beauty Makeup',
       weight: '500 gm',
       sellingPrice: 150,
     },
     {
-      imageUrl: 'assets/products/potato-regular-50-gm-1-kg.jpg',
+      imageUrl: 'assets/products/dekko-combo-pasta-buy-2-get-1-free-200-gm.jpg',
       name: 'Aci Pure Salt 1 kg',
       weight: '1 kg',
       sellingPrice: 100,
     },
     {
-      imageUrl: 'assets/products/deshi-gajor-local-carrot-25-gm-500-gm.jpg',
+      imageUrl: 'assets/products/guava-premium-50-gm-1-kg.jpg',
       name: 'Beauty Makeup',
       weight: '500 gm',
       sellingPrice: 150,
