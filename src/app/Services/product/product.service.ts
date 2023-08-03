@@ -4,7 +4,10 @@ import { environment } from 'src/enivronment/environment';
 import { ProductModel } from '../../Model/product.model';
 import { Observable } from 'rxjs';
 import { UserProduct } from 'src/app/Model/user-product.model';
-import { CustomerProductModel } from 'src/app/Model/customer-product.model';
+import {
+  CustomerProductModel,
+  CustomerProductResponseModel,
+} from 'src/app/Model/customer-product.model';
 
 @Injectable({
   providedIn: 'root',
@@ -29,8 +32,10 @@ export class ProductService {
       formData
     );
   }
-  GetProductsByPage(pageNumber: number): Observable<CustomerProductModel[]> {
-    return this.http.get<CustomerProductModel[]>(
+  GetProductsByPage(
+    pageNumber: number
+  ): Observable<CustomerProductResponseModel> {
+    return this.http.get<CustomerProductResponseModel>(
       this.baseApiUrl +
         `api/CustomerProduct/GetProducts?pageNumber=${pageNumber}`
     );

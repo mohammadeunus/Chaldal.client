@@ -1,7 +1,7 @@
 <br />
 <p>All Products</p>
 <div class="product-grid">
-  <div *ngFor="let eachCard of slicedPproducts">
+  <div *ngFor="let eachCard of products2">
     <app-product-card [product]="eachCard"></app-product-card>
     <!-- Add more app-product-card components here -->
   </div>
@@ -9,5 +9,5 @@
 <br />
 <app-page-navigation
   (handleUserClick)="onPageNumberChanges($event)"
-  [totalRecords]="customerProductResponse.totalRecords"
+  [totalRecords]="totalRecords"
 ></app-page-navigation>
