@@ -7,7 +7,7 @@ import { CustomerProductModel } from 'src/app/Model/customer-product.model';
   styleUrls: ['./all-products.component.css'],
 })
 export class AllProductsComponent {
-  products: CustomerProductModel[] = [
+  private products: CustomerProductModel[] = [
     {
       imageUrl: 'assets/products/aarong-dairy-sour-curd-500-gm.jpg',
       name: 'Aci Pure Salt 1 kg',
@@ -85,6 +85,6 @@ export class AllProductsComponent {
   slicedPproducts: any[];
 
   constructor() {
-    this.slicedPproducts = this.products;
+    this.slicedPproducts = this.products.slice(0, 20);
   }
 }
