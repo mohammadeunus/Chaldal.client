@@ -1,6 +1,6 @@
 ## Current Progress
 
-![UML_eCom](/ReadMeAssets/projectShowCase.mp4)
+![UML_eCom](/ReadMeAssets/projectShowCase.gif)
 
 ## app/Services
 
