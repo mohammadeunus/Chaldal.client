@@ -11,9 +11,9 @@ import { SideNavBarComponent } from './components/admin/side-nav-bar/side-nav-ba
 import { AdminComponent } from './components/admin/admin.component';
 import { UserComponent } from './components/customer/user.component';
 import { DashBoardComponent } from './components/admin/dash-board/dash-board.component';
-import { AdminHeaderComponent } from './components/admin/admin-header/admin-header.component'; 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ProductListComponent } from './components/admin/product/product-list/product-list.component'; 
+import { AdminHeaderComponent } from './components/admin/admin-header/admin-header.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
+import { ProductListComponent } from './components/admin/product/product-list/product-list.component';
 import { NgChartsModule } from 'ng2-charts'; 
 import { SideNavComponent } from './components/customer/side-nav/side-nav.component';
 import { AddProductComponent } from './components/admin/product/add-product/add-product.component';
@@ -22,7 +22,9 @@ import { SuggestedProductsComponent } from './components/customer/product/sugges
 import { AdvertisementComponent } from './components/shared/advertisement/advertisement.component';
 import { AllProductsComponent } from './components/customer/product/all-products/all-products.component';
 import { CarouselModule } from 'primeng/carousel';
-import { HomeComponent } from './components/customer/home/home.component';
+import { HomeComponent } from './components/customer/home/home.component'; 
+import { PageNavigationComponent } from './components/shared/page-navigation/page-navigation.component';
+import { PaginatorModule } from 'primeng/paginator';
  
 @NgModule({
   declarations: [
@@ -37,13 +39,14 @@ import { HomeComponent } from './components/customer/home/home.component';
     DashBoardComponent,
     AdminHeaderComponent,
     HomeComponent,
-    ProductListComponent,
+    ProductListComponent, 
     SideNavComponent, 
     AddProductComponent,
     ProductCardComponent,
     SuggestedProductsComponent,
-    AdvertisementComponent,
-    AllProductsComponent,  
+    AdvertisementComponent, 
+    AllProductsComponent,
+    PageNavigationComponent, 
   ],
   imports: [
     BrowserModule,
@@ -51,9 +54,10 @@ import { HomeComponent } from './components/customer/home/home.component';
     HttpClientModule,
     NgbModule,
     NgChartsModule,
-    CarouselModule
+    CarouselModule,
+    PaginatorModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
