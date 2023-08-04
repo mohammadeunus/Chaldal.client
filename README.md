@@ -1,3 +1,7 @@
+## Current Progress
+
+![UML_eCom](/ReadMeAssets/projectShowCase.mp4)
+
 ## app/Services
 
 - this includes codes to talk to the api,
