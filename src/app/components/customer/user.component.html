@@ -1,4 +1,16 @@
 <app-header class="app-header"></app-header>
-<div class="body container"> 
-  <app-root></app-root> 
+<div class="body">
+  <app-root></app-root>
+</div>
+
+<app-side-nav [sidebarVisible]="sidebarVisible"></app-side-nav>
+
+<div class="cartButton">
+  <p-button
+    (click)="toggleSidebar()"
+    icon="pi pi-shopping-cart"
+    styleClass="p-button-rounded p-button-text p-button-raised"
+    badge="8"
+    badgeClass="p-badge-danger"
+  ></p-button>
 </div>

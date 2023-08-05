@@ -1,5 +1,9 @@
 <div class="sideNav">
-  <p-sidebar [(visible)]="sidebarVisible" position="right">
+  <p-sidebar
+    [(visible)]="sidebarVisible"
+    position="right"
+    [showCloseIcon]="true"
+  >
     <h3>Sidebar</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -8,11 +12,4 @@
       commodo consequat.
     </p>
   </p-sidebar>
-  <p-button
-    (click)="sidebarVisible = true"
-    icon="pi pi-shopping-cart"
-    styleClass="p-button-rounded p-button-text p-button-raised"
-    badge="8"
-    badgeClass="p-badge-danger"
-  ></p-button>
 </div>

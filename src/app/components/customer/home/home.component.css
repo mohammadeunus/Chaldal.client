@@ -1,11 +1,5 @@
-.ad {
-  margin: 0 auto;
-  /* Center the advertisement container horizontally */
+.ad {  
+    padding: 5px;
+  margin: 15px; /* Center the advertisement container horizontally */
 }
-
-app-side-nav {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  /* Add any other styles for the side navigation */
-}
+  

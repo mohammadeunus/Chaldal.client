@@ -1,5 +1,8 @@
 .sideNav {
   display: flex;
   justify-content: end;
-  margin: 20px;
+  margin: 20px; 
+}
+.button{
+  display : fixed;
 }
