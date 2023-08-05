@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import {
   CustomerProductModel,
   CustomerProductResponseModel,
@@ -11,7 +11,7 @@ import { ProductService } from 'src/app/Services/product/product.service';
   templateUrl: './all-products.component.html',
   styleUrls: ['./all-products.component.css'],
 })
-export class AllProductsComponent implements OnInit {
+export class AllProductsComponent implements OnInit, OnChanges {
   inputPageNumber: number = 1;
   products2!: CustomerProductModel[];
   totalRecords!: number;
@@ -20,6 +20,10 @@ export class AllProductsComponent implements OnInit {
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
+    this.loadData();
+  }
+
+  ngOnChanges(): void {
     this.loadData();
   }
 
@@ -38,5 +42,6 @@ export class AllProductsComponent implements OnInit {
 
   onPageNumberChanges(event: any) {
     this.inputPageNumber = event;
+    this.loadData(); // Call loadData whenever the page number changes
   }
 }
