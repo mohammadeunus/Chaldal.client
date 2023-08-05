@@ -1,1 +1,18 @@
-<p>side-nav works!</p>
+<div class="sideNav">
+  <p-sidebar [(visible)]="sidebarVisible" position="right">
+    <h3>Sidebar</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
+  </p-sidebar>
+  <p-button
+    (click)="sidebarVisible = true"
+    icon="pi pi-shopping-cart"
+    styleClass="p-button-rounded p-button-text p-button-raised"
+    badge="8"
+    badgeClass="p-badge-danger"
+  ></p-button>
+</div>
