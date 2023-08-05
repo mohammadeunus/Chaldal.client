@@ -28,3 +28,7 @@ img {
 img:hover {
   transform: scale(0.99);
 }
+
+.not-available {
+  color: red;
+}
