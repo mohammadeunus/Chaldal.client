@@ -6,7 +6,7 @@
     <p class="card-title">{{ product.name }}</p>
     <p class="card-subtitle">{{ product.weight }}</p>
     <ng-container *ngIf="product.sellingPrice !== null; else notAvailable">
-      <p class="card-text">{{ product.sellingPrice }}</p>
+      <p class="card-text">{{ product.sellingPrice }} taka</p>
     </ng-container>
     <ng-template #notAvailable>
       <p class="card-text" [ngClass]="'not-available'">Not Available</p>
