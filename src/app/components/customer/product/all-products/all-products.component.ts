@@ -1,5 +1,4 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit, OnChanges } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {
   CustomerProductModel,
   CustomerProductResponseModel,
@@ -11,9 +10,9 @@ import { ProductService } from 'src/app/Services/product/product.service';
   templateUrl: './all-products.component.html',
   styleUrls: ['./all-products.component.css'],
 })
-export class AllProductsComponent implements OnInit, OnChanges {
-  inputPageNumber: number = 1;
-  products2!: CustomerProductModel[];
+export class AllProductsComponent implements OnInit {
+  @Input() inputPageNumber: number = 1;
+  products!: CustomerProductModel[];
   totalRecords!: number;
   succeeded!: boolean;
 
@@ -23,14 +22,15 @@ export class AllProductsComponent implements OnInit, OnChanges {
     this.loadData();
   }
 
-  ngOnChanges(): void {
-    this.loadData();
+  onPageNumberChanges(event: number) {
+    this.inputPageNumber = event;
+    this.loadData(); // Call loadData whenever the page number changes
   }
 
   loadData() {
     this.productService.GetProductsByPage(this.inputPageNumber).subscribe(
       (response: CustomerProductResponseModel) => {
-        this.products2 = response.customerProductList;
+        this.products = response.customerProductList;
         this.totalRecords = response.totalRecords;
         this.succeeded = response.Succeeded;
       },
@@ -38,10 +38,5 @@ export class AllProductsComponent implements OnInit, OnChanges {
         console.log('Error fetching products:', error);
       }
     );
-  }
-
-  onPageNumberChanges(event: any) {
-    this.inputPageNumber = event;
-    this.loadData(); // Call loadData whenever the page number changes
   }
 }
