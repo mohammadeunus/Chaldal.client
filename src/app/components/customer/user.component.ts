@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
 })
 export class UserComponent { 
   sidebarVisible: boolean = false;
+  numberOfOrders: number = 0;
 
   toggleSidebar() {
-    this.sidebarVisible = !this.sidebarVisible; // Toggle the sidebar visibility here
+    this.sidebarVisible = !this.sidebarVisible; // Toggle the sidebar visibility here 
   }
 }

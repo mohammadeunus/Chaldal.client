@@ -28,6 +28,10 @@ import { PaginatorModule } from 'primeng/paginator';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './components/shared/login/login.component';
+import { RegistrationComponent } from './components/shared/registration/registration.component';
+import { CheckboxModule } from 'primeng/checkbox';
+import { AvatarGroupModule } from 'primeng/avatargroup';
 
 @NgModule({
   declarations: [
@@ -50,6 +54,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AdvertisementComponent,
     AllProductsComponent,
     PageNavigationComponent,
+    LoginComponent,
+    RegistrationComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +68,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SidebarModule,
     ButtonModule,
     BrowserAnimationsModule,
+    CheckboxModule,
+    AvatarGroupModule
   ],
   providers: [],
   bootstrap: [AppComponent],
