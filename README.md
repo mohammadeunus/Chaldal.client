@@ -46,12 +46,12 @@
 ## Dependency Injections
 there are three different ways to register and provide services using dependency injection: 
 1. Singleton
-  to make a service file as singleton mention the following in the file
-  ```
-  @Injectable({ 
-  providedIn: 'root',
-  })
-  ```
+   to make a service file as singleton mention the following in the file
+   ```
+   @Injectable({ 
+   providedIn: 'root',
+   })
+   ```
   > setting this property to 'root' level, makes it a singleton to be shared across the entire application.
 2. Transient
    When a service is registered as transient, a new instance of the service is created every time it is requested.
