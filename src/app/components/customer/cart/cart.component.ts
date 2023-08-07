@@ -1,0 +1,36 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { CartModel } from 'src/app/Model/cart.model';
+import { SharedService } from 'src/app/Services/shared/shared.service';
+
+@Component({
+  selector: 'app-cart',
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.css']
+})
+export class CartComponent implements  OnInit {
+  cartItems: CartModel[] = []; // Initialize an empty cart
+  numberOfCartItems: number = this.cartItems.length; 
+
+  constructor(private sharedServices: SharedService) {}
+
+  ngOnInit() { 
+    this.getDataFromProductCard();
+  }
+ 
+  getDataFromProductCard(){
+    //on add to cart button click from product card 
+    this.sharedServices.getData().subscribe((data) => { 
+      this.cartItems.push( {cartItemId:2 , quantity:0, productRefId: data.ProductId, productName: data.name, productSellingPrice: data.sellingPrice, customerRefId:21});
+      this.numberOfCartItems = this.cartItems.length; 
+    });
+  }
+  emptyCart() { 
+    this.cartItems = [];
+    this.numberOfCartItems = this.cartItems.length; 
+  }
+  checkout() {
+    // Implement your checkout logic here
+    console.log('Checkout', this.cartItems); 
+    this.emptyCart();
+  } 
+}

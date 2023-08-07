@@ -32,6 +32,7 @@ import { LoginComponent } from './components/shared/login/login.component';
 import { RegistrationComponent } from './components/shared/registration/registration.component';
 import { CheckboxModule } from 'primeng/checkbox';
 import { AvatarGroupModule } from 'primeng/avatargroup';
+import { CartComponent } from './components/customer/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     PageNavigationComponent,
     LoginComponent,
     RegistrationComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

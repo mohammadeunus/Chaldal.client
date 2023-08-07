@@ -4,19 +4,8 @@
     position="right"
     [showCloseIcon]="true"
   >
-    <h3>{{ numberOfCartItems }} items in cart</h3>
-    <div *ngIf="cartItems.length > 0; else emptyCart">
-      <ul>
-        <li *ngFor="let item of cartItems">
-          {{ item.name }} - ${{ item.price }}
-        </li>
-      </ul>
-      <button (click)="checkout()">Checkout</button>
+    <div>
+      <app-cart></app-cart>
     </div>
-    <ng-template #emptyCart>
-      <p>
-        Your cart is as empty as the desert! 🌵 Why not add something? 🛒 😃
-      </p>
-    </ng-template>
   </p-sidebar>
 </div>

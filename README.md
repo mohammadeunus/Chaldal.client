@@ -35,12 +35,12 @@
   ></p-paginator>
 </div>
 ```
-  [first]="first"
-  [rows]="rows"
-  - these two are used to set the default values of the paginator set from user side but by click function.
-  on the other hand  
-  [totalRecords]="totalRecords"
-  - this data is sent from database thus used input decorator to catch the data
+> [first]="first"
+> [rows]="rows"
+- these two are used to set the default values of the paginator set from user side but by click function.
+on the other hand  
+> [totalRecords]="totalRecords"
+- this data is sent from database thus used input decorator to catch the data
    
 
 ## Dependency Injections

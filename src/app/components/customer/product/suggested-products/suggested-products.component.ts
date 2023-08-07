@@ -11,35 +11,41 @@ import { ProductService } from 'src/app/Services/product/product.service';
 export class SuggestedProductsComponent {
   products: CustomerProductModel[] = [
     {
+      ProductId: 1,
       imageUrl: 'assets/products/aci-pure-salt-1-kg.jpg',
       name: 'Aci Pure Salt 1 kg',
       weight: '1 kg',
       sellingPrice: 100,
     },
     {
+      ProductId: 1,
       imageUrl: 'assets/products/roshun-garlic-imported-25-gm-500-gm.jpg',
       name: 'Beauty Makeup',
       weight: '500 gm',
       sellingPrice: 150,
     },{
+      ProductId: 1,
       imageUrl: 'assets/products/lizol-floor-cleaner-floral-disinfectant-surface-1-ltr.jpg',
       name: 'Aci Pure Salt 1 kg',
       weight: '1 kg',
       sellingPrice: 100,
     },
     {
+      ProductId: 1,
       imageUrl: 'assets/products/rupchanda-fortified-soyabean-oil-5-ltr.jpg',
       name: 'Beauty Makeup',
       weight: '500 gm',
       sellingPrice: 150,
     },
     {
+      ProductId: 1,
       imageUrl: 'assets/products/potato-regular-50-gm-1-kg.jpg',
       name: 'Aci Pure Salt 1 kg',
       weight: '1 kg',
       sellingPrice: 100,
     },
     {
+      ProductId: 1,
       imageUrl: 'assets/products/deshi-gajor-local-carrot-25-gm-500-gm.jpg',
       name: 'Beauty Makeup',
       weight: '500 gm',
