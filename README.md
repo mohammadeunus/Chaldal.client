@@ -42,3 +42,32 @@
   [totalRecords]="totalRecords"
   - this data is sent from database thus used input decorator to catch the data
    
+
+## Dependency Injections
+there are three different ways to register and provide services using dependency injection: 
+1. Singleton
+  to make a service file as singleton mention the following in the file
+  ```
+  @Injectable({ 
+  providedIn: 'root',
+  })
+  ```
+  > setting this property to 'root' level, makes it a singleton to be shared across the entire application.
+2. Transient
+   When a service is registered as transient, a new instance of the service is created every time it is requested.
+   ```
+   @Injectable({
+   providedIn: 'any',
+   })
+   ```
+3. Scoped
+   Use when a single instance of a service for each lazy-loaded module needs to be created.
+   ```
+   @Injectable({
+   providedIn: 'any',
+   })
+   ``` 
+
+
+
+
