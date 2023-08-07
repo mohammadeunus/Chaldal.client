@@ -64,8 +64,8 @@ there are three different ways to register and provide services using dependency
    Use when a single instance of a service for each lazy-loaded module needs to be created.
    ```
    @Injectable({
-   providedIn: 'any',
-   })
+   providedIn: SomeModule, // Provides the service at the module level (separate instance for each module)
+   }) 
    ``` 
 
 
