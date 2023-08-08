@@ -27,12 +27,12 @@
         <td class="resize-button">
           <span class="p-buttonset">
             <button
-              (click)="increamentQnty()"
+              (click)="incrementQuantity()"
               type="button"
               class="pi pi-chevron-up btn-xs"
             ></button>
             <button
-              (click)="decreamentQnty()"
+              (click)="decrementQuantity()"
               type="button"
               class="pi pi-chevron-down btn-xs"
             ></button>
@@ -43,6 +43,13 @@
   </table>
 
   <p>Total Price: {{ TotalPrice }}</p>
+  <button
+    (click)="checkout()"
+    type="button"
+    class="btn btn-outline-success btn-xs"
+  >
+    checkout
+  </button>
 </div>
 <ng-template #emptyCart>
   <p>Your cart is as empty as the desert! 🌵 Why not add something? 🛒 😃</p>

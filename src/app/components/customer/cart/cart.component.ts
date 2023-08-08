@@ -8,51 +8,78 @@ import { SharedService } from 'src/app/Services/shared/shared.service';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-  cartItems: CartModel[] = []; // Initialize an empty cart
+  cartItems: CartModel[] = [];
   numberOfCartItems: number = this.cartItems.length;
   TotalPrice: number = 0;
 
   constructor(private sharedServices: SharedService) {}
 
   ngOnInit() {
+    this.loadCartData();
+  }
+
+  loadCartData() {
     this.getDataFromProductCard();
+    this.calculateTotalPrice();
   }
 
   getDataFromProductCard() {
-    //on add to cart button click from product card
     this.sharedServices.getData().subscribe((data) => {
-      this.cartItems.push({
-        quantity: 0,
-        productRefId: data.ProductId,
-        productName: data.name,
-        productSellingPrice: data.sellingPrice,
-        customerRefId: 21,
-      });
-      this.numberOfCartItems = this.cartItems.length;
-      this.TotalPrice = this.cartItems.reduce(
-        (acc, item) => acc + item.productSellingPrice,
-        0
-      );
+      const cartItem = this.createCartItem(data);
+      this.addToCart(cartItem);
     });
+  }
+
+  createCartItem(data: any): CartModel {
+    return {
+      quantity: 1,
+      productRefId: data.ProductId,
+      productName: data.name,
+      productSellingPrice: data.sellingPrice,
+      customerRefId: 21,
+    };
+  }
+
+  addToCart(cartItem: CartModel) {
+    this.cartItems.push(cartItem);
+    this.numberOfCartItems = this.cartItems.length;
+    this.sharedServices.sendNumberOfItems(this.numberOfCartItems);
+  }
+
+  calculateTotalPrice() {
+    this.TotalPrice = this.cartItems.reduce(
+      (acc, item) => acc + item.productSellingPrice,
+      0
+    );
   }
 
   emptyCart() {
     this.cartItems = [];
     this.TotalPrice = 0;
     this.numberOfCartItems = this.cartItems.length;
+    this.sharedServices.sendNumberOfItems(this.numberOfCartItems);
   }
 
   checkout() {
     console.log('Checkout', this.cartItems);
     this.emptyCart();
   }
-  removeFromCart(_t9: CartModel) {
-    throw new Error('Method not implemented.');
+
+  removeFromCart(item: CartModel) {
+    const index = this.cartItems.indexOf(item);
+    if (index !== -1) {
+      this.cartItems.splice(index, 1);
+      this.calculateTotalPrice();
+      this.numberOfCartItems = this.cartItems.length;
+      this.sharedServices.sendNumberOfItems(this.numberOfCartItems);
+    }
   }
-  increamentQnty() {
-    throw new Error('Method not implemented.');
+
+  incrementQuantity() {
+    this.calculateTotalPrice();
   }
-  decreamentQnty() {
-    throw new Error('Method not implemented.');
+
+  decrementQuantity() {
+    this.calculateTotalPrice();
   }
 }
