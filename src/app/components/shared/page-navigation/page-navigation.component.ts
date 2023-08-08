@@ -6,16 +6,16 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./page-navigation.component.css'],
 })
 export class PageNavigationComponent {
-  @Output() handleUserClick = new EventEmitter();
+  @Output() handleUserClick = new EventEmitter(); // custom event to send data to parent component using output decorator
   pageNumber!: number;
-  @Input() totalRecords: number = 20;
+  @Input() totalRecords: number = 20; // this component will take input from parent component
   first: number = 0;
   rows: number = 20;
 
-  onPageChange(event: any) {
-    this.first = event.first;
-    this.rows = event.rows;
-    this.pageNumber = event.page + 1;
+  PageChanged(data: any) {
+    this.first = data.first;
+    this.rows = data.rows;
+    this.pageNumber = data.page + 1;
     this.handleUserClick.emit(this.pageNumber);
   }
 }

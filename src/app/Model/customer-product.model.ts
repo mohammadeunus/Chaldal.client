@@ -1,4 +1,5 @@
 export interface CustomerProductModel {
+  ProductId: number;
   name: string;
   sellingPrice: number;
   weight: string;

@@ -1,0 +1,11 @@
+.resize-text {
+  font-size: 9px; /* Adjust as needed */
+}
+
+.resize-text-button {
+  font-size: 11px; /* Same font size as the text */
+  /* Add any other styling you want */
+}
+button {
+  margin-bottom: 10px;
+}
