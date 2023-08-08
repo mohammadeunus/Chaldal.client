@@ -75,11 +75,16 @@ export class CartComponent implements OnInit {
     }
   }
 
-  incrementQuantity() {
+  incrementQuantity(item: CartModel) {
+    item.quantity++;
     this.calculateTotalPrice();
+    console.log(this.cartItems);
   }
 
-  decrementQuantity() {
-    this.calculateTotalPrice();
+  decrementQuantity(item: CartModel) {
+    if (item.quantity > 1) {
+      item.quantity--;
+      this.calculateTotalPrice();
+    }
   }
 }
