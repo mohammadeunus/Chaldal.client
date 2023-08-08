@@ -1,5 +1,4 @@
-export interface CartModel{
-    cartItemId: number;
+export interface CartModel{ 
     quantity: number;
     productRefId: number;
     productName: string;

@@ -10,6 +10,7 @@ import { SharedService } from 'src/app/Services/shared/shared.service';
 export class CartComponent implements  OnInit {
   cartItems: CartModel[] = []; // Initialize an empty cart
   numberOfCartItems: number = this.cartItems.length; 
+  TotalPrice: number = 0;
 
   constructor(private sharedServices: SharedService) {}
 
@@ -20,16 +21,19 @@ export class CartComponent implements  OnInit {
   getDataFromProductCard(){
     //on add to cart button click from product card 
     this.sharedServices.getData().subscribe((data) => { 
-      this.cartItems.push( {cartItemId:2 , quantity:0, productRefId: data.ProductId, productName: data.name, productSellingPrice: data.sellingPrice, customerRefId:21});
-      this.numberOfCartItems = this.cartItems.length; 
+      this.cartItems.push( { quantity:0, productRefId: data.ProductId, productName: data.name, productSellingPrice: data.sellingPrice, customerRefId:21});
+    this.numberOfCartItems = this.cartItems.length; 
+    this.TotalPrice = this.cartItems.reduce((acc, item) => acc + item.productSellingPrice, 0);
     });
   }
+  
   emptyCart() { 
     this.cartItems = [];
+    this.TotalPrice = 0;
     this.numberOfCartItems = this.cartItems.length; 
   }
-  checkout() {
-    // Implement your checkout logic here
+
+  checkout() { 
     console.log('Checkout', this.cartItems); 
     this.emptyCart();
   } 
