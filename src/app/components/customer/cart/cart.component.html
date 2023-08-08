@@ -1,14 +1,33 @@
 <h3>{{ numberOfCartItems }} items in cart</h3>
-<div *ngIf="cartItems.length > 0; else emptyCart">
-  <ul *ngFor="let item of cartItems">
-    <li>
-      {{ item.productName }} -- {{ item.productSellingPrice }} :
-      {{ item.quantity }}
-    </li>
-  </ul>
-  <p>Total Price: {{ TotalPrice }}</p>
-  <button (click)="checkout()">Checkout</button>
-</div>
+<table *ngIf="cartItems.length > 0; else emptyCart" class="cart-table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody resize-text>
+    <tr *ngFor="let item of cartItems">
+      <td>
+        <button type="button" class="btn btn-outline-danger btn-xs">X</button>
+      </td>
+      <td>{{ item.productName }}</td>
+      <td>{{ item.productSellingPrice }}</td>
+      <td>{{ item.quantity }}</td>
+      <td class="resize-button">
+        <span class="p-buttonset">
+          <button type="button" class="pi pi-chevron-up btn-xs"></button>
+          <button type="button" class="pi pi-chevron-down btn-xs"></button>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>Total Price: {{ TotalPrice }}</p>
+
 <ng-template #emptyCart>
   <p>Your cart is as empty as the desert! 🌵 Why not add something? 🛒 😃</p>
 </ng-template>
