@@ -20,13 +20,13 @@ export class CartComponent implements OnInit {
 
   loadCartData() {
     this.getDataFromProductCard();
-    this.calculateTotalPrice();
   }
 
   getDataFromProductCard() {
     this.sharedServices.getData().subscribe((data) => {
       const cartItem = this.createCartItem(data);
       this.addToCart(cartItem);
+      this.calculateTotalPrice();
     });
   }
 
