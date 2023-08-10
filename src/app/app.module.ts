@@ -33,6 +33,7 @@ import { RegistrationComponent } from './components/shared/registration/registra
 import { CheckboxModule } from 'primeng/checkbox';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { CartComponent } from './components/customer/cart/cart.component';
+import { SearchComponent } from './components/customer/search/search.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { CartComponent } from './components/customer/cart/cart.component';
     LoginComponent,
     RegistrationComponent,
     CartComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
