@@ -48,10 +48,14 @@
     <div class="d-flex align-items-center">
       <form class="w-100 me-3" role="search">
         <input
+          required
+          [(ngModel)]="searchQuery"
+          name="search"
+          #searchInput="ngModel"
           type="search"
           class="form-control"
           placeholder="Search..."
-          aria-label="Search"
+          (keyup.enter)="onEnterPressed()"
         />
       </form>
 

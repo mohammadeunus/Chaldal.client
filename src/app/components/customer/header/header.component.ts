@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SearchService } from 'src/app/Services/customer/search.service';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   searchQuery: string = '';
+  constructor(private SearchServices: SearchService) {}
 
   onEnterPressed() {
+    this.SearchServices.sendData(this.searchQuery);
     console.log('Search query:' + this.searchQuery);
   }
 }
