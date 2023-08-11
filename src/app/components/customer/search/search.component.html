@@ -1,1 +1,12 @@
-<p>search works!</p>
+<br />
+<p>Search Result</p>
+<div class="product-grid">
+  <div *ngFor="let eachCard of products">
+    <app-product-card [product]="eachCard"></app-product-card>
+  </div>
+</div>
+<br />
+<app-page-navigation
+  (handleUserClick)="onPageNumberChanges($event)"
+  [totalRecords]="totalRecords"
+></app-page-navigation>
