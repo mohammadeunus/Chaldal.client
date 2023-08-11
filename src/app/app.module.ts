@@ -34,6 +34,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { CartComponent } from './components/customer/cart/cart.component';
 import { SearchComponent } from './components/customer/search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { SearchComponent } from './components/customer/search/search.component';
     ButtonModule,
     BrowserAnimationsModule,
     CheckboxModule,
-    AvatarGroupModule
+    AvatarGroupModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
