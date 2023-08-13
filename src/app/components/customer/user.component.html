@@ -1,5 +1,5 @@
 <app-header class="app-header"></app-header>
-<div class="body">
+<div class="body" *ngIf="searchingEntry.trim() === ''; else appRoot">
   <app-root></app-root>
 </div>
 
@@ -13,3 +13,8 @@
   ></p-button>
   <span class="badge">{{ numberOfOrders }}</span>
 </div>
+
+<!-- templates -->
+<ng-template #appRoot>
+  <app-search></app-search>
+</ng-template>

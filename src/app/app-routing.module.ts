@@ -28,7 +28,6 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
-      { path: 'search', component: SearchComponent },
       // Add more user routes as needed
     ],
   },

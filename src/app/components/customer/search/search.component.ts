@@ -20,7 +20,9 @@ export class SearchComponent {
   constructor(private searchService: SearchService) {}
 
   ngOnInit(): void {
-    this.loadData();
+    if (this.searchingEntry != null) {
+      this.loadData();
+    }
   }
 
   onPageNumberChanges(event: number) {
@@ -28,7 +30,7 @@ export class SearchComponent {
     this.loadData(); // Call loadData whenever the page number changes
   }
 
-  loadData() {
+  private loadData() {
     this.searchService
       .getSearchResultsPage(this.searchingEntry, this.inputPageNumber)
       .subscribe(
@@ -41,5 +43,11 @@ export class SearchComponent {
           console.log('Error fetching products:', error);
         }
       );
+  }
+
+  private loadSearchQuery() {
+    this.searchService.getData().subscribe((data) => {
+      this.searchingEntry = data;
+    });
   }
 }
