@@ -12,7 +12,7 @@ import { SearchService } from 'src/app/Services/customer/search.service';
 })
 export class SearchComponent {
   @Input() inputPageNumber: number = 1;
-  searchingEntry!: string;
+  @Input() searchingEntry!: string;
   products!: CustomerProductModel[];
   totalRecords!: number;
   succeeded!: boolean;
@@ -22,6 +22,7 @@ export class SearchComponent {
   ngOnInit(): void {
     if (this.searchingEntry != null) {
       this.loadData();
+      console.log('Search entry in app-search:', this.searchingEntry);
     }
   }
 
