@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { tap, catchError, throwError } from 'rxjs';
 import {
   CustomerProductModel,
   CustomerProductResponseModel,
@@ -13,17 +14,28 @@ import { SearchService } from 'src/app/Services/customer/search.service';
 export class SearchComponent {
   @Input() inputPageNumber: number = 1;
   @Input() searchingEntry!: string;
-  products!: CustomerProductModel[];
+  @Input() products!: any;
   totalRecords!: number;
   succeeded!: boolean;
+  dataLoaded = false; // Track if data has been loaded
+  noResultsFound = false; // Track if no results were found
 
   constructor(private searchService: SearchService) {}
 
   ngOnInit(): void {
+    this.loadSearchQuery();
+
     if (this.searchingEntry != null) {
-      this.loadData();
-      console.log('Search entry in app-search:', this.searchingEntry);
+      console.log('Search entry in app-search:', this.searchingEntry); // executes only when this page is loaded or reloaded
     }
+  }
+
+  ngOnChanges(): void {
+    this.loadData();
+
+    console.log('noResultsFound: ' + this.noResultsFound);
+    console.log('dataLoaded: ' + this.dataLoaded);
+    console.log('products: ' + this.products);
   }
 
   onPageNumberChanges(event: number) {
@@ -34,16 +46,15 @@ export class SearchComponent {
   private loadData() {
     this.searchService
       .getSearchResultsPage(this.searchingEntry, this.inputPageNumber)
-      .subscribe(
-        (response: CustomerProductResponseModel) => {
-          this.products = response.customerProductList;
-          this.totalRecords = response.totalRecords;
-          this.succeeded = response.Succeeded;
+      .subscribe({
+        next: (data: CustomerProductModel) => {
+          this.products = data;
+          this.dataLoaded = true;
+          this.noResultsFound = this.products.length == 0;
+          console.log(data);
         },
-        (error) => {
-          console.log('Error fetching products:', error);
-        }
-      );
+        error: (err: any) => console.log(err),
+      });
   }
 
   private loadSearchQuery() {

@@ -19,8 +19,8 @@ export class SearchService {
   getSearchResultsPage(
     searchTerm: string,
     pageNumber: number
-  ): Observable<CustomerProductResponseModel> {
-    return this.http.get<CustomerProductResponseModel>(
+  ): Observable<CustomerProductModel> {
+    return this.http.get<CustomerProductModel>(
       this.baseApiUrl +
         `api/CustomerProduct/SearchProductName?productName=${searchTerm}&pageNumber=${pageNumber}`
     );

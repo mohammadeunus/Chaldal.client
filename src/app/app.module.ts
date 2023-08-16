@@ -35,6 +35,7 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
 import { CartComponent } from './components/customer/cart/cart.component';
 import { SearchComponent } from './components/customer/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { ErrorComponent } from './components/shared/error/error.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { FormsModule } from '@angular/forms';
     RegistrationComponent,
     CartComponent,
     SearchComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
