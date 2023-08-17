@@ -10,25 +10,9 @@
     2. inside it, run the command `ng g s "service name"`
        - here `g` is for generate, and `s` is for service. angular generate service.
 
-## input and output decorator
-
-### output decorator
-
-```
-<app-page-navigation
-  (handleUserClick)="onPageNumberChanges($event)"
-  [totalRecords]="totalRecords"
-></app-page-navigation>
-
-```
-
-- handleUserClick is a custom even made in child component using @outptut decorator to help get data from child2parent.
-  - when handleUserClick is triggered, it calls onPageNumberChanges method and passes value from child compoent 2 parent through event -->
-
-## code explanation
-
-### component: page-navigation
-
+ 
+## code explanation 
+## component: page-navigation 
 ```
 <div class="card flex justify-content-center">
   <p-paginator
@@ -72,8 +56,22 @@ there are three different ways to register and provide services using dependency
    ```
    @Injectable({
    providedIn: SomeModule, // Provides the service at the module level (separate instance for each module)
-   })
-   ```
+ 
+   }) 
+   ``` 
+### input and output decorator
+
+#### output decorator
+```
+<app-page-navigation
+  (handleUserClick)="onPageNumberChanges($event)"
+  [totalRecords]="totalRecords"
+></app-page-navigation>
+
+```
+- handleUserClick is a custom even made in child component using @outptut decorator to help get data from child2parent.
+  - when handleUserClick is triggered, it calls onPageNumberChanges method and passes value from child compoent 2 parent through event -->
+ 
 
 ### how to use ng-template
 
