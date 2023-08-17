@@ -1,0 +1,19 @@
+<div *ngIf="dataLoaded">
+  <div *ngIf="noResultsFound">
+    <p>Product not found</p>
+  </div>
+  <div *ngIf="!noResultsFound">
+    <br />
+    <p>Search Result</p>
+    <div class="product-grid">
+      <div *ngFor="let eachCard of products">
+        <app-product-card [product]="eachCard"></app-product-card>
+      </div>
+    </div>
+    <br />
+    <app-page-navigation
+      (handleUserClick)="onPageNumberChanges($event)"
+      [totalRecords]="totalRecords"
+    ></app-page-navigation>
+  </div>
+</div>

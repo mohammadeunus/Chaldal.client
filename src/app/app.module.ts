@@ -33,6 +33,10 @@ import { RegistrationComponent } from './components/shared/registration/registra
 import { CheckboxModule } from 'primeng/checkbox';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { CartComponent } from './components/customer/cart/cart.component';
+import { SearchComponent } from './components/customer/search/search.component';
+import { FormsModule } from '@angular/forms';
+import { ErrorComponent } from './components/shared/error/error.component';
+import { ShowProductsComponent } from './components/customer/product/show-products/show-products.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +62,9 @@ import { CartComponent } from './components/customer/cart/cart.component';
     LoginComponent,
     RegistrationComponent,
     CartComponent,
+    SearchComponent,
+    ErrorComponent,
+    ShowProductsComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +78,8 @@ import { CartComponent } from './components/customer/cart/cart.component';
     ButtonModule,
     BrowserAnimationsModule,
     CheckboxModule,
-    AvatarGroupModule
+    AvatarGroupModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
