@@ -25,6 +25,8 @@ export class SearchComponent {
   ngOnInit(): void {
     this.loadSearchQuery();
 
+    console.log('test: ');
+
     if (this.searchingEntry != null) {
       console.log('Search entry in app-search:', this.searchingEntry); // executes only when this page is loaded or reloaded
     }
@@ -32,10 +34,6 @@ export class SearchComponent {
 
   ngOnChanges(): void {
     this.loadData();
-
-    console.log('noResultsFound: ' + this.noResultsFound);
-    console.log('dataLoaded: ' + this.dataLoaded);
-    console.log('products: ' + this.products);
   }
 
   onPageNumberChanges(event: number) {
@@ -52,9 +50,9 @@ export class SearchComponent {
           this.totalRecords = 30;
           this.dataLoaded = true;
           this.noResultsFound = this.products.length == 0;
-          console.log('response: ' + response.customerProductList);
-          console.log('response totalRecords: ' + response.totalRecords);
-          console.log('response totalRecords: ' + this.totalRecords);
+
+          console.log('dataLoaded: ' + this.dataLoaded);
+          console.log('noResultsFound: ' + this.noResultsFound);
         },
         (error) => {
           console.log('Error fetching products:', error);
