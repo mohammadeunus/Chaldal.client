@@ -36,6 +36,7 @@ import { CartComponent } from './components/customer/cart/cart.component';
 import { SearchComponent } from './components/customer/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { ErrorComponent } from './components/shared/error/error.component';
+import { ShowProductsComponent } from './components/customer/product/show-products/show-products.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { ErrorComponent } from './components/shared/error/error.component';
     CartComponent,
     SearchComponent,
     ErrorComponent,
+    ShowProductsComponent,
   ],
   imports: [
     BrowserModule,

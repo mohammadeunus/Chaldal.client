@@ -15,7 +15,7 @@ export class SearchComponent {
   @Input() inputPageNumber: number = 1;
   @Input() searchingEntry!: string;
   @Input() products!: any;
-  totalRecords!: number;
+  totalRecords: number = 17;
   succeeded!: boolean;
   dataLoaded = false; // Track if data has been loaded
   noResultsFound = false; // Track if no results were found
@@ -46,15 +46,20 @@ export class SearchComponent {
   private loadData() {
     this.searchService
       .getSearchResultsPage(this.searchingEntry, this.inputPageNumber)
-      .subscribe({
-        next: (data: CustomerProductModel) => {
-          this.products = data;
+      .subscribe(
+        (response: CustomerProductResponseModel) => {
+          this.products = response.customerProductList;
+          this.totalRecords = 30;
           this.dataLoaded = true;
           this.noResultsFound = this.products.length == 0;
-          console.log(data);
+          console.log('response: ' + response.customerProductList);
+          console.log('response totalRecords: ' + response.totalRecords);
+          console.log('response totalRecords: ' + this.totalRecords);
         },
-        error: (err: any) => console.log(err),
-      });
+        (error) => {
+          console.log('Error fetching products:', error);
+        }
+      );
   }
 
   private loadSearchQuery() {
